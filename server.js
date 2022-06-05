@@ -2,9 +2,8 @@ const express = require("express");
 const app = express()
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser");
-const { Timestamp } = require("bson");
 const path = require('path')
-const scheduleContent ="Schedule interview";
+const ejs = require('ejs')
 
 app.set('view engine', 'ejs');
 
@@ -21,19 +20,33 @@ const apptSchema = {
     reason: String,
 }
 
+//create Appt model
 const Appt = mongoose.model("Appointment", apptSchema)
 
+//path for css and images
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/views/index.html");
+
+//render main page
+app.get("/", (req, res) => {
+    Appt.find({}, function(err, interviews) {
+        res.render('index',{
+            interviewsList: interviews
+        });
+    })
 })
 
+
+//go to scheduler page
 app.get('/schedule',function(req,res){
     res.sendFile(__dirname + '/views/schedule.html');
-  });
+})
 
+app.get('/update_appt',(req, res) => {
+    res.render('update_appt')
+})
 
+//create new object for database
 app.post("/", function(req, res) {
     let newAppt = new Appt({
         interviewer: req.body.interviewer,

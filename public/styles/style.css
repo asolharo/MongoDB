@@ -58,3 +58,30 @@ h3 {
     font-size: 20pt;
     color: darkblue;
 }
+
+.table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-style: solid;
+    color: #000000;
+  }
+  
+  .table td, .table th {
+    border-width: 2px;
+    border-color: #ffffff;
+    border-style: solid;
+    padding: 3px;
+  }
+  
+  .table thead {
+    background-color: #ffd877;
+  }
+
+  .border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+
