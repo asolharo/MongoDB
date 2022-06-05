@@ -3,6 +3,10 @@ const app = express()
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser");
 const { Timestamp } = require("bson");
+const path = require('path')
+const scheduleContent ="Schedule interview";
+
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -12,16 +16,22 @@ mongoose.connect("mongodb+srv://asolharo:UDvmMlRCyaaC0lft@cluster0.9nll8ek.mongo
 const apptSchema = {
     interviewer: String,
     date: Date,
-    time: Timestamp,
+    time: String,
     name: String,
     reason: String,
 }
 
 const Appt = mongoose.model("Appointment", apptSchema)
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/views/index.html");
 })
+
+app.get('/schedule',function(req,res){
+    res.sendFile(__dirname + '/views/schedule.html');
+  });
 
 
 app.post("/", function(req, res) {
