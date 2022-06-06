@@ -59,6 +59,6 @@ app.post("/", function(req, res) {
     res.redirect('/')
 })
 
-app.listen(1987, function() {
-    console.log("server connected and running")
+app.listen(3000, function() {
+    console.log("server connected and running on 3000")
 })

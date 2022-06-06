@@ -16,7 +16,7 @@
         <h2>Interview's Agenda</h1>
         <div class="list">
             <div id="appointments">
-
+                <% if (interviewsList != '') { %>
                 <table class="table">
                     <thead>
                       <tr>
@@ -47,7 +47,10 @@
                       <%})%>
                     </tbody>
                   </table>
-              
+                <% } else { %>
+                    <h2 class="text-center text-secondary mt-5">No appointments at this moment</h2>
+                <% } %>
+
             </div>
         </div>
 </div>
