@@ -43,7 +43,7 @@ My database for this project is simple. It has an active cluster within MongoDB 
 
 # Useful Websites
 
-- [How to set the default value for an HTML <select> element ?](https://www.geeksforgeeks.org/how-to-set-the-default-value-for-an-html-select-element/)
+- [How to set the default value for an HTML "select" element ? ](https://www.geeksforgeeks.org/how-to-set-the-default-value-for-an-html-select-element/)
 - [Edge.js: .NET and Node.js](https://www.npmjs.com/package/edge-js)
 - [iterating number type in express-edge?](https://stackoverflow.com/questions/65977343/iterating-number-type-in-express-edge)
 - [Edge.js: .NET and Node.js](https://www.npmjs.com/package/edge-js)
