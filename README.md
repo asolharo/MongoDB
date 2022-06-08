@@ -54,3 +54,4 @@ My database for this project is simple. It has an active cluster within MongoDB 
 
 - Dynamic messages on the page for when a record is added or when there's no records at all.
 - Frontend visual adjustments for a nicer user interface
+- Make the website accesible straight from GitHub
