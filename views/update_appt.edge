@@ -1,0 +1,27 @@
+@layout('layout.app')
+
+@section('content')
+
+<form class="container" id="form" action="/update_appt/save_{{appt.id}}" method="POST">
+    <div class="form-group">
+        <select class="form-control" id="interviewer" name="interviewer">
+            <option value="{{appt.interviewer}}" selected disabled hidden >{{appt.interviewer}}</option>
+            <option value="bishop">Bishop</option>
+            <option value="counselor1">First Councelor</option>
+            <option value="counselor2">Second Councelor</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="datetime-local" id="date" name="date" value="{{appt.date}}">
+    </div>
+    <div class="form-group">
+        <input class="form-control" id="name" name="name" value="{{appt.name}}">
+    </div>
+    <div class="form-group">
+        <input class="form-control" id="reason" name="reason" value="{{appt.reason}}">
+    </div>
+    <button class="button">Save changes</button>
+</form>
+<div id="link"><a href="/" style="color: black">Back to home</a></div>
+
+@endsection

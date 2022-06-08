@@ -85,3 +85,10 @@ h3 {
     box-shadow: 1px 3px 10px #e9ecef;
 }
 
+.mssg {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 10em;
+    z-index: 1;
+    color: red;
+}
