@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +15,9 @@
     "express": "^4.18.1",
     "mongoose": "^6.3.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asolharo/MongoDB.git"

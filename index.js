@@ -28,7 +28,7 @@ const Appt = mongoose.model("Appointment", apptSchema)
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//render main page
+//route to main page
 app.get("/", (req, res) => {
     Appt.find({}, function(err, interviews) {
         res.render('index',{
